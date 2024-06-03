@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "SsIVUDEqhbsd7xhNdwk5XKeRtNmyDFF9roZSXhMULbk=",
+  "Hash": "/AES2h8igm15lxW8XZmhkQ/zZfrZPHwBC995+od6rbc=",
   "Source": "B16",
   "BasePath": "_content/B16",
   "Mode": "Default",
@@ -1193,6 +1193,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Users\\mduls\\Desktop\\New folder\\B16\\B7\\wwwroot\\uploads\\Raspored1.xml",
+      "SourceId": "B16",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\mduls\\Desktop\\New folder\\B16\\B7\\wwwroot\\",
+      "BasePath": "_content/B16",
+      "RelativePath": "uploads/Raspored1.xml",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\Raspored1.xml"
     }
   ]
 }
