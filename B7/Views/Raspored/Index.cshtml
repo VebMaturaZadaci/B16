@@ -1,0 +1,95 @@
+﻿@model IEnumerable<B16.Models.Raspored>
+
+@{
+    ViewData["Title"] = "Raspored";
+}
+
+@{
+    int min = Model.Min(t => t.RedniBroj);
+    int max = Model.Max(t => t.RedniBroj);
+    int br = max - min + 1;
+    var array2 = new string[br, 5];
+    for (int i = 0; i < br; i++)
+    {
+        for (int j = 0; j < 5; j++)
+        {
+
+            array2[i, j] = "/";
+        }
+    }
+
+    for (int i = min; i <= max; i++)
+    {
+        foreach (var item in Model.Where(n => n.RedniBroj == i))
+        {
+            string dan = item.Dan;
+            switch (dan)
+            {
+                case "Ponedeljak":
+                    array2[i - min, 0] = item.Predmet;
+                    break;
+                case "Utorak":
+                    array2[i - min, 1] = item.Predmet;
+                    break;
+                case "Sreda":
+                    array2[i - min, 2] = item.Predmet;
+                    break;
+                case "Cetvrtak":
+                    array2[i - min, 3] = item.Predmet;
+                    break;
+                case "Petak":
+                    array2[i - min, 4] = item.Predmet;
+                    break;
+
+            }
+        }
+    }
+
+
+}
+
+<div class="text-center">
+    <h1 class="display-4">Raspored casova</h1><br />
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Redni broj
+            </th>
+            <th>
+                Ponedeljak
+            </th>
+            <th>
+                Utorak
+            </th>
+            <th>
+                Sreda
+            </th>
+            <th>
+                Cetvrtak
+            </th>
+            <th>
+                Petak
+            </th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @for (int i = min; i <= max; i++)
+        {
+            <tr>
+                <td>@i</td>
+                @for (int j = 0; j < 5; j++)
+                {
+                    <td>@array2[i - min, j]</td>
+
+                }
+
+
+            </tr>
+        }
+
+    </tbody>
+</table>
